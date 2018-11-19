@@ -9,9 +9,7 @@ def main():
 
     parametros = {'s': titulo, 'apikey': chave, 'page': pagina, 'type': 'movie'}
     r = requests.get('http://www.omdbapi.com/', params=parametros)
-
     data = r.json()
-
     print("-------------------------------------------------------")
     if(data['Response'] == 'False'):
         print('Nenhum resultado encontrado')
